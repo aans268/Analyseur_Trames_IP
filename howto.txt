@@ -1,0 +1,31 @@
+Manuel d'utilisation du visualiseur de trafic:
+
+Ce manuel d'utilisation a pour but de vous expliquer comment utiliser notre visualiseur de trafic.
+
+Ouvrez un terminal puis placez vous dans le dossier "Aans_Clement_ProjetReseaux".
+
+Dans ce dossier vous trouverez le fichier source "projet.py", le fichier "readme.txt" décrivant la structure du code, ce fichier "howto.txt" ainsi qu'un 
+fichier texte "trames.txt" qui contient des trames.
+
+Pour exécuter le programme, exécutez la commande "python3 projet.py <nom_fichier>" en écrivant le nom du fichier contenant les trames que l'on souhaite analyser
+ à la place de <nom_fichier>.
+Si aucun nom de fichier n'est entré, le programme se lancera en analysant les trames contenu dans le fichier "trames.txt".
+
+Une fois le programme lancé, une fenêtre s'ouvrira. Cette fenêtre contiendra une interface graphique représentant le trafic entre les 2 machines s'échangeant des trames.
+Chaque trame est numérotée et représentée par un rectangle contenant des informations ainsi qu'une flèche indiquant le sens de circulation des trames. 
+En haut à gauche se trouve l'adresse IP de la machine A et en haut à droite celle de la machine B. (Les adresses IP ne s'affichent que s'il y au moins une trame analysée 
+atteignant la couche Internet)
+Chaque trame a une couleur selon la couche la plus profonde qu'elle atteint:
+    -Si il s'agit de la couche Réseau(Ethernet), la trame est de couleur orange
+    -Si il s'agit de la couche Internet(IP), la trame est de couleur jaune
+    -Si il s'agit de la couche Transport(TCP), la trame est de couleur verte
+    -Si il s'agit de la couche Application(HTTP), la trame est de couleur bleue
+Au sein de chaque trame de l'interface graphique se trouve des informations relatives à la couche appartient la trame. 
+
+Vous pouvez naviguer de haut en bas dans l'interface graphique à l'aide des boutons flèche du haut et flèche du bas se trouvant en haut à droite de l'interface. 
+(Une scrollbar est disponible une fois en plein écran, cependant nous vous recommandons d'utiliser les flèches)
+
+Si vous souhaitez les informations détaillées d'une trame précise, veuillez vous référer au terminal où l'intégralité du détail de chaque trame
+ est affiché. 
+
+Une fois terminée, fermez l'interface graphique à l'aide de la croix au haut à droite de la fenêtre pour quitter le programme.
